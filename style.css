@@ -1,0 +1,26 @@
+body{
+    background-color: slategray;
+}
+
+h1,h2,h3,h4,h5{
+    Font-Family: 'Eczar', Serif;
+    Font-Size: 43px;
+}
+p{
+    Font-Family: 'Merriweather', Serif;
+    Font-Size: 14px;
+}
+
+.scrolling-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .scrolling-wrapper .card {
+    flex: 0 0 auto;
+  }
+
+  .scrolling-wrapper::-webkit-scrollbar {
+      display: none;
+  }
