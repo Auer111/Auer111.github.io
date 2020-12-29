@@ -1,14 +1,44 @@
+
+/* html{
+    //cursor: none;
+} */
 body{
     background-color: slategray;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+    margin: 0;
 }
 
-h1,h2,h3,h4,h5{
+#bg{
+    background-image: url(/wall.jpg);
+    background-image: linear-gradient(#000000b5, #00000000),url(/wall.jpg);
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    position: fixed;
+    background-size: cover;
+}
+
+/* h1,h2,h3,h4,h5{
     Font-Family: 'Eczar', Serif;
     Font-Size: 43px;
 }
 p{
     Font-Family: 'Merriweather', Serif;
     Font-Size: 14px;
+} */
+h1{
+    font-size: 3rem;
+    text-align: center;
+    writing-mode: vertical-lr;
+    text-orientation: mixed;
+    color:yellow;   
+}
+
+.center{
+    display:grid;
+    place-items: center;
 }
 
 .scrolling-wrapper {
@@ -23,4 +53,41 @@ p{
 
   .scrolling-wrapper::-webkit-scrollbar {
       display: none;
+  }
+
+
+
+
+  .steel{
+      position: relative;
+      background-image: url(/Steel.svg);
+      height: 5rem;
+      width: 100vw;
+  }
+  .slider{
+      background-image: url(/Slider.svg);
+      width:5rem;
+      height: 5rem;
+      position: absolute;
+      z-index: 5;
+  }
+  .rope{
+
+    background-image: url(/Rope.svg);
+    width:5rem;
+    min-height: 5rem;
+    height: 5rem;
+    top:2.5em;
+    position: absolute;
+    z-index: 4;
+
+  }
+  .claw{
+    background-image: url(/Claw.svg);
+    width:5rem;
+    height: 5rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 5;
   }
