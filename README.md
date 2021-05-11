@@ -1,2 +1,2 @@
 # Auer111.github.io
-JJ Auer Portfolio
+JJ Auer Resume

@@ -7,12 +7,13 @@
 
 *{
   box-sizing: border-box;
+  -webkit-print-color-adjust:exact;
 }
 
 :root{
-  --page-width: 8.5in;
+  --page-width: 9.5in;
   --page-height: 11in;
-  --main-width: 6.4in;
+  --main-width: 7.4in;
   --sidebar-width: calc(var(--page-width) - var(--main-width));
   --decorator-horizontal-margin: 0.2in;
 
@@ -59,7 +60,7 @@ li{
   float: left;
   width: var(--main-width);
   padding: 0.25in 0.25in 0 0.25in;
-  font-size: 7pt;
+  font-size: 10pt;
 }
 
 #sidebar{
