@@ -9,6 +9,68 @@
     
   </head>
   <body lang="en">
+
+    <div id="popup" class="no-print">
+      <div>
+        <button class="close-container-wrapper" onclick="document.getElementById('popup').remove();">
+          <div class="close-container">
+            <div class="leftright"></div>
+            <div class="rightleft"></div>
+          </div>
+        </button>
+        
+
+
+        <button class="button" onclick="window.print()">
+          <span class="button__text">
+            <span></span><span></span></span><span> </span><span>p</span><span>r</span><span>i</span><span>n</span><span>t</span>
+          </span>
+          <svg class="button__svg" role="presentational" viewBox="0 0 600 600">
+
+            <defs>
+              <clipPath id="myClip">
+                <rect x="0" y="350" width="100%" height="100%"></rect>
+              </clipPath>
+            </defs>
+            
+            <g xmlns="http://www.w3.org/2000/svg">
+              <rect x="89.6" y="12.8" class="st3" width="332.8" height="128"/>
+              <rect x="64" y="102.4" class="st0" width="384" height="38.4"/>
+              <path class="st1" d="M0,281.6h512V192c0-28.2-23-51.2-51.2-51.2H51.2C23,140.8,0,163.8,0,192V281.6z"/>
+              <path class="st0" d="M51.2,422.4h409.6c28.2,0,51.2-23,51.2-51.2V268.8H0v102.4C0,399.4,23,422.4,51.2,422.4z"/>
+              <circle class="st2" cx="460.8" cy="192" r="12.8"/>
+              
+              <path class="st4" d="M428.8,358.4H83.2c-10.2,0-19.2-9-19.2-19.2C64,329,73,320,83.2,320h345.6c10.2,0,19.2,9,19.2,19.2   C448,349.4,439,358.4,428.8,358.4z"/>
+              
+            </g>
+            <g clip-path="url(#myClip)">
+              <g id="creditcard">
+                <rect x="89.6" y="158.4" class="st3" width="332.8" height="140.8"/>
+                <rect x="89.6" y="132.8" class="st5" width="332.8" height="25.6"/>
+                <rect x="153.6" y="184" class="st6" width="217.6" height="25.6"/>
+                <rect x="153.6" y="235.2" class="st6" width="166.4" height="25.6"/>
+              </g>
+            </g>
+
+
+            
+            <!-- <g id="wallet">
+              <path d="M478,288.23h-337A28.93,28.93,0,0,0,112,317.14V546.2a29,29,0,0,0,28.94,28.95H478a29,29,0,0,0,28.95-28.94h0v-229A29,29,0,0,0,478,288.23Z" fill="#a4bdc1" stroke="#323c44" stroke-miterlimit="10" stroke-width="14" />
+              <path d="M512.83,382.71H416.71a28.93,28.93,0,0,0-28.95,28.94h0V467.8a29,29,0,0,0,28.95,28.95h96.12a19.31,19.31,0,0,0,19.3-19.3V402a19.3,19.3,0,0,0-19.3-19.3Z" fill="#a4bdc1" stroke="#323c44" stroke-miterlimit="10" stroke-width="14" />
+              <path d="M451.46,435.79v7.88a14.48,14.48,0,1,1-29,0v-7.9a14.48,14.48,0,0,1,29,0Z" fill="#a4bdc1" stroke="#323c44" stroke-miterlimit="10" stroke-width="14" />
+              <path d="M147.87,541.93V320.84c-.05-13.2,8.25-21.51,21.62-24.27a42.71,42.71,0,0,1,7.14-1.32l-29.36-.63a67.77,67.77,0,0,0-9.13.45c-13.37,2.75-20.32,12.57-20.27,25.77l.38,221.24c-1.57,15.44,8.15,27.08,25.34,26.1l33-.19c-15.9,0-28.78-10.58-28.76-25.93Z" fill="#7b8f91" />
+              <path d="M148.16,343.22a6,6,0,0,0-6,6v92a6,6,0,0,0,12,0v-92A6,6,0,0,0,148.16,343.22Z" fill="#323c44" />
+            </g> -->
+        
+          </svg>
+        </button>
+
+
+      </div>
+    </div>
+
+
+
     <aside id="sidebar">
       <div class="side-block" id="contact">
         
@@ -117,11 +179,31 @@
           <i class="fa fa-suitcase"></i> Experiences
         </h2>
 
+        <section class="blocks">
+          <div class="date">
+            <span>present</span><span>Jun '21</span>
+          </div>
+          <div class="decorator">
+          </div>
+          <div class="details">
+            <header>
+              <h3>Full Stack .NET Developer</h3>
+              <span class="place">New Mexico Interactive (NIC)</span>
+              <span class="location">St Petersburg, FL</span>
+            </header>
+            <div>
+              <ul>
+                <li>Razor component class library (RCL) for cross app reusability</li>
+                <li>Reverse engineered .NET Framework Membership with SSMS profiler</li>
+              </ul>
+              </div>
+          </div>
+        </section>
 
 
         <section class="blocks">
           <div class="date">
-            <span>present</span><span>Nov '19</span>
+            <span>May '21</span><span>Nov '19</span>
           </div>
           <div class="decorator">
           </div>
@@ -215,8 +297,8 @@
             <div>
               <ul>
                 <li>Constructed TVP, an online temp tag purchase service for New Mexico citizens</li>
-                <li>Created low level best practice with nearly full reign on project implimentation</li>
-                <li>Implimented microservices, PDF generation, cryptography, API's, scheduled tasks, etc</li>
+                <li>Created low level best practice with nearly full reign on project implementation</li>
+                <li>Implemented microservices, PDF generation, cryptography, API's, scheduled tasks, etc</li>
                 <li>Put in place standards via class libraries; error handling, input validation, api clients, etc</li>
               </ul>
             </div>
@@ -264,7 +346,7 @@
             <div>
               <ul>
                 <li>Built on a Generator function for preloading all PII test data from Thycotic</li>
-                <li>Implimented data mapping, date time parsing, error handling, visualization, etc</li>
+                <li>Implemented data mapping, date time parsing, error handling, visualization, etc</li>
                 <li>Custom pre-request syntax for quick request chaining, passing of data and test writing</li>
                 <li>Runtime cryptography for state PII compliance</li>
               </ul>
@@ -294,6 +376,7 @@
         
       </section>
     </section>
+    
     
   </body>
 </html>
