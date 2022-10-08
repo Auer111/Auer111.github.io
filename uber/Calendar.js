@@ -5,14 +5,7 @@ class Calendar
         this.renderStart = new Date();
         this.renderEnd = new Date();
         this.renderDate = true;
-
-        
         this.render();
-
-        document.addEventListener('scroll', ()=>
-        {
-            document.querySelector("#calendar").style.backgroundColor = "hsl("+Math.round(this.getScrollPercent())+"deg, 25%, 80%)";
-        });
     }
 
     render(){
@@ -120,13 +113,6 @@ class Calendar
             var date = new Date(this.valueOf());
             return date.toLocaleString('default', { month: 'long' });
         }
-    }
-    getScrollPercent() {
-        var h = document.documentElement, 
-            b = document.body,
-            st = 'scrollTop',
-            sh = 'scrollHeight';
-        return (h[st]||b[st]) / ((h[sh]||b[sh]) - h.clientHeight) * 256;
     }
     isNullOrUndefined(that){
         if(typeof that === "undefined" || that === null){

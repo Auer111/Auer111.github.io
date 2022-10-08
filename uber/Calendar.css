@@ -2,7 +2,7 @@
     display: flex;
 }
 #calendar .month{
-    /* background-color: lightblue; */
+    background-color: lightblue;
 }
 #calendar .month-header{
     font-size: 4rem;
