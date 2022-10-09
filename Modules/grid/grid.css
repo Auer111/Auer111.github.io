@@ -1,0 +1,51 @@
+#grid *{
+    pointer-events: none;
+}
+
+#grid{
+    transform: skewY(333deg);
+    width: fit-content;
+}
+
+#grid .row{
+    display: flex;
+}
+#grid .cell{
+    margin-right: -5rem;
+    transform: skewY(27deg);
+    margin-bottom: -5rem;
+    position: relative;
+}
+
+
+#grid img{
+    width: 10vw;
+}
+
+#grid .overlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.overlay > div > div {
+    pointer-events: all !important;
+    padding: 50px;
+    float: left;
+    border: 1px solid black;
+    transform: rotate(45deg);
+}
+.overlay > div{
+    transform:scale(1, .5) translateY(5.5rem) translateX(1rem)
+}
+
+#grid img{
+    transform: translateY(0px);
+}
+/* todo */
+@keyframe jump {
+    from {transform:translateY(0rem);}
+    to {transform:translateY(1rem);}
+  }

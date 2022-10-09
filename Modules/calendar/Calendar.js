@@ -1,6 +1,9 @@
-class Calendar
+import Utils from "/Modules/Utils.js"
+
+export class Calendar
 {
     constructor() {
+        new Utils().loadCss(import.meta.url);
         this.createExtensions();
         this.renderStart = new Date();
         this.renderEnd = new Date();
@@ -121,3 +124,4 @@ class Calendar
     }
 }
 
+export default Calendar;
