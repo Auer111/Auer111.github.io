@@ -11,15 +11,15 @@
     display: flex;
 }
 #grid .cell{
-    margin-right: -5rem;
+    margin-right: -75px;
     transform: skewY(27deg);
-    margin-bottom: -5rem;
+    margin-bottom: -80px;
     position: relative;
 }
 
 
 #grid img{
-    width: 10vw;
+    width: 153px;
 }
 
 #grid .overlay{
@@ -38,14 +38,43 @@
     transform: rotate(45deg);
 }
 .overlay > div{
-    transform:scale(1, .5) translateY(5.5rem) translateX(1rem)
+    transform:scale(1, .5) translateY(88px) translateX(20px)
 }
 
 #grid img{
     transform: translateY(0px);
 }
 /* todo */
-@keyframe jump {
-    from {transform:translateY(0rem);}
-    to {transform:translateY(1rem);}
+#grid .hover {
+    -webkit-animation-name: hover;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease;
+    -webkit-animation-fill-mode: forwards;
+}
+
+#grid .unhover {
+    -webkit-animation-name: unhover;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease;
+    -webkit-animation-fill-mode: forwards;
+}
+  
+  @-webkit-keyframes hover {
+    from {
+        margin-top: 0;
+    }
+    to {
+        margin-top: -20px;
+    }
+  }
+  
+  @-webkit-keyframes unhover {
+    from {
+        margin-top: -20px;
+    }
+    to {
+        margin-top: 0;
+    }
   }
