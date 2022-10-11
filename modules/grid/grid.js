@@ -15,7 +15,7 @@ export class Isometric{
         let i = 0;
         outer: for(let x = 0; x < this.rows; x++){
             let row = document.createElement("div");
-            row.style.marginLeft = `${-75* x}px`;
+            row.style.marginLeft = `${-77* x}px`;
             row.classList = "row";
             for(let y = 0; y < this.cols; y++){
 
