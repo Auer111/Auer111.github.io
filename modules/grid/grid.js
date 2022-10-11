@@ -28,10 +28,10 @@ export class Isometric{
 
                 cell.style.zIndex = 1000 - x - y;
 
-                let overlay = this.overlay(`.cell${x}-${y} > img`);
+                let overlay = this.overlay(`.cell${x}-${y} > img`, this.items[i].click);
 
                 cell.appendChild(overlay);
-                cell.appendChild(this.items[i]);
+                cell.appendChild(this.items[i].img);
                 row.appendChild(cell);
                 i++;
             }
@@ -41,7 +41,7 @@ export class Isometric{
         return grid;
     }
 
-    overlay(target){
+    overlay(target, onclick){
         let inner = document.createElement('div');
 
         inner.addEventListener('mouseover', ()=> {
@@ -49,6 +49,7 @@ export class Isometric{
             el.classList.remove('unhover');
             el.classList.add('hover');
         });
+        inner.addEventListener('click', onclick);
         inner.addEventListener('mouseout', ()=> {
             let el = document.querySelector(target);
             el.classList.remove('hover');

@@ -1,7 +1,9 @@
 export class Img {
     
     constructor(){
-        this.Tile = 'Tile.png';
+        this.Blank = 'blank.png';
+        this.Tile = 'tile.png';
+        this.Calendar = 'calendar.png';
     }
 
     url(name){
@@ -9,6 +11,7 @@ export class Img {
     }
 
     render(name){
+        name = name ?? this.Blank;
         let img = document.createElement('img');
         img.src = `/modules/img/${name}`;
         return img;

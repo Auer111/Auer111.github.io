@@ -1,4 +1,4 @@
-import Utils from "/Modules/Utils.js"
+import Utils from "/modules/Utils.js"
 
 export class Calendar
 {
