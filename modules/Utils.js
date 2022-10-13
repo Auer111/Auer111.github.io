@@ -20,6 +20,14 @@ export class Utils{
     }
   }
 
+  loadHtml (file, onLoad) 
+  {
+    fetch(file)
+    .then(function (response) { return response.text(); })
+    .then(function (html) { onLoad(html); })
+    .catch(function (err) { console.warn('Something went wrong.', err); });
+  }  
+
   createExtensions(){
     String.prototype.hashCode = function() {
       var hash = 0,
