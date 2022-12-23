@@ -16,7 +16,7 @@
     "predeploy": "npm run build",
     "deploy": "auer111 -d build",
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "BUILD_PATH='./' react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
