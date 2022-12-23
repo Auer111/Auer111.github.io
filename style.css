@@ -3,12 +3,13 @@ main{
     width: max(15em,30vw);
     display: grid;
     place-content: center;
-    height: 70vh;
+    height: 100vh;
 }
 
 body{
     background-image: url('./bg.png');
     background-position: center;
+    background-size: 200vh;
     height: 100vh;
 }
 
