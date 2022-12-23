@@ -1,0 +1,39 @@
+*{font-family: 'grim reaper', sans-serif;}
+main{
+    width: max(15em,30vw);
+    display: grid;
+    place-content: center;
+    height: 70vh;
+}
+
+body{
+    background-image: url('./bg.png');
+    background-position: center;
+    height: 100vh;
+}
+
+sub{
+    font-size: small;
+}
+
+.lead{
+    color: #cfb69c;
+}
+
+.btn-outline-wheat{
+    --bs-btn-color: #cfb69c;
+    --bs-btn-border-color: #cfb69c;
+    --bs-btn-hover-color: #000;
+    --bs-btn-hover-bg: #cfb69c;
+    --bs-btn-hover-border-color: #cfb69c;
+    --bs-btn-focus-shadow-rgb: 248,249,250;
+    --bs-btn-active-color: #000;
+    --bs-btn-active-bg: #cfb69c;
+    --bs-btn-active-border-color: #cfb69c;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #cfb69c;
+    --bs-btn-disabled-bg: transparent;
+    --bs-btn-disabled-border-color: #cfb69c;
+    --bs-gradient: none;
+}
+
