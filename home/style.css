@@ -42,7 +42,8 @@ body{
     background-image: url('./boy.png');
     background-size: 70vh;
 }
-.col:hover{
+.col:hover,
+.col:focus{
     box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.8);
 }
 sub{
