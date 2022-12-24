@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" href="./bootstrap.min.css" >
+    <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/grim-reaper-2">
+    <link rel="stylesheet" href="./style.css">
   <style>
     .form-container {
       background-color: #ffffff;
@@ -38,22 +40,99 @@
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="form-container">
-      <div class="form-header">Contact Us</div>
-        <form>
-            <div class="form-group">
-            <input type="text" class="form-control" placeholder="Name" required>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="#">
+            <img id="crest" src="./crest.png">
+            Luxx
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarColor01">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./pricing">Pricing</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Separated link</a>
+              </div>
+            </li>
+          </ul>
+          <div>
+          </div>
+        </div>
+      </nav>
+    
+    <main>
+        <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+            <div class="col-md-5 p-lg-5 mx-auto my-5">
+                <h1 class="display-4 fw-normal">Luxx</h1>
+                <p class="lead fw-normal">
+                    Welcome to Luxx, the ultimate destination for luxury milk products.
+                </p>
+                <a class="btn btn-outline-secondary" href="#">Coming soon</a>
             </div>
-            <div class="form-group">
-            <input type="email" class="form-control" placeholder="Email" required>
+            <div class="product">
+                <img src="./milk.png">
             </div>
-            <div class="form-group">
-                <textarea class="form-control" rows="5" placeholder="Message" required></textarea>
+        </div>
+    
+        <div class="d-md-flex flex-md-equal w-100 my-md-">
+            <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden ml-md-3">
+                <div class="my-3 p-3">
+                    <h2 class="display-5">Indulge</h2>
+                    <p class="lead">Indulge in the unmatched flavor of Luxx milk</p>
+                </div>
+                <div class="p-wrap">
+                    <img src="./milk1.png" class="p-milk">
+                </div>
             </div>
-        </form>
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </div>
-    </div>
+            
+            <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden mx-md-3">
+                <div class="my-3 py-3">
+                    <h2 class="display-5">Savor</h2>
+                    <p class="lead">Savor the smooth texture of Luxx milk</p>
+                </div>
+                <div class="p-wrap">
+                    <img src="./milk2.png" class="p-milk">
+                </div>
+            </div>
+        </div>
+        
+        <div class="d-md-flex flex-md-equal w-100 my-md-3">
+            <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden ml-md-3">
+                <div class="my-3 p-3">
+                    <h2 class="display-5">Experience</h2>
+                    <p class="lead">Experience the creamy richness of Luxx milk</p>
+                </div>
+                <div class="p-wrap">
+                    <img src="./box1.png" class="p-milk">
+                </div>
+            </div>
+            <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden mx-md-3">
+                <div class="my-3 p-3">
+                    <h2 class="display-5">Luxx</h2>
+                    <p class="lead">Treat yourself to the luxury of Luxx milk</p>
+                </div>
+                <div class="p-wrap">
+                    <img src="./box2.png" class="p-milk">
+                </div>
+            </div>
+        </div>
+    </main> 
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
 </body>
 
