@@ -1,0 +1,34 @@
+
+
+
+.card{
+    border: none;
+}
+
+.card-body{
+    height: 20em;
+    overflow: hidden;
+    position: relative;
+}
+
+.card a{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    position: absolute;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+}
+
+
+img{
+    width: 100%;
+    pointer-events: none;
+    touch-action: none;
+    user-select: none;
+}

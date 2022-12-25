@@ -1,0 +1,86 @@
+        /*
+ * Globals
+ */
+
+ body{
+    overflow: hidden;
+ }
+
+/* Custom default button */
+.btn-light,
+.btn-light:hover,
+.btn-light:focus {
+  color: #333;
+  text-shadow: none; /* Prevent inheritance from `body` */
+}
+
+
+/*
+ * Base structure
+ */
+
+
+.cover-container {
+  max-width: 42em;
+}
+
+
+/*
+ * Header
+ */
+
+.nav-masthead .nav-link {
+
+  border-bottom: .25rem solid transparent;
+}
+
+.nav-masthead .nav-link:hover,
+.nav-masthead .nav-link:focus {
+  border-bottom-color: rgba(255, 255, 255, .25);
+}
+
+.nav-masthead .nav-link + .nav-link {
+  margin-left: 1rem;
+}
+
+.nav-masthead .active {
+  border-bottom-color: var(--bs-nav-link-color);
+}
+.nav-masthead .nav-link:hover, .nav-masthead .nav-link:focus {
+    border-bottom-color: #485785;
+}
+
+.img{
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100vw;
+}
+
+#cloak{
+    animation: fade-in-out 20s linear infinite;
+}
+
+img{
+    width: 100vw;
+    opacity: 0.5;
+}
+
+.fixed{
+    bottom: 10vh;
+    position: fixed;
+    left: 0;
+    right: 0;
+}
+
+@keyframes fade-in-out {
+    0% {
+      opacity: .7;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: .7;
+    }
+  }
