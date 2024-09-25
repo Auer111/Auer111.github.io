@@ -1,0 +1,7 @@
+html, body{
+  overflow: hidden;
+}
+#map-container{
+  width: 100vw;
+  height: 100vh !important;
+}
