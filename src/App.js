@@ -13,15 +13,49 @@ function App() {
     mapboxgl.accessToken =
       "pk.eyJ1IjoiYXVlcjk1IiwiYSI6ImNtMWlleWQwaTBidG8yanB0MXJjYmVob2EifQ.Bv5Qq-JRaLid4pL3_U9esQ";
 
+    //33(.3) = 33% of window is unfilled by globe
+    const zoomLevel = Math.log(window.innerWidth / 333) / Math.log(1.85);
+
     const map = new mapboxgl.Map({
       container: mapContainerRef.current,
       style: "mapbox://styles/mapbox/standard", // Choose globe-friendly style
-      center: [0, 0], // Starting position [lng, lat]
+      center: [-140.5037, 38.0406], // Starting position [lng, lat]
+      zoom: zoomLevel,
       projection: "globe", // Set the map projection to 'globe'
+      interactive: false,
     });
 
     map.on("style.load", () => {
-      map.setFog({}); // Set the default atmosphere style for the globe
+      map.on("load", () => {
+        // Add a circle directly to the map using GeoJSON
+        map.addSource("circle-source", {
+          type: "geojson",
+          data: {
+            type: "FeatureCollection",
+            features: [
+              {
+                type: "Feature",
+                geometry: {
+                  type: "Point",
+                  coordinates: [-84.5037, 38.0406], // The point location
+                },
+              },
+            ],
+          },
+        });
+
+        // Add a circle layer
+        map.addLayer({
+          id: "circle-layer",
+          type: "circle",
+          source: "circle-source",
+          paint: {
+            "circle-radius": 3, // Circle size
+            "circle-color": "#FF1616", // Circle color
+            "circle-opacity": 0.8, // Circle opacity
+          },
+        });
+      });
     });
 
     mapRef.current = map;
