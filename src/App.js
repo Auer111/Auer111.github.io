@@ -1,6 +1,8 @@
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import mapboxgl from "mapbox-gl";
 
+import icon from "./icon.png";
+import man from "./man.png";
 import "mapbox-gl/dist/mapbox-gl.css";
 import "./App.css";
 
@@ -8,19 +10,17 @@ function App() {
   const mapRef = useRef();
   const mapContainerRef = useRef();
   let animationFrameId = useRef();
+  const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 768);
 
   useEffect(() => {
     mapboxgl.accessToken =
       "pk.eyJ1IjoiYXVlcjk1IiwiYSI6ImNtMWlleWQwaTBidG8yanB0MXJjYmVob2EifQ.Bv5Qq-JRaLid4pL3_U9esQ";
 
-    //33(.3) = 33% of window is unfilled by globe
-    const zoomLevel = Math.log(window.innerWidth / 333) / Math.log(1.85);
-
     const map = new mapboxgl.Map({
       container: mapContainerRef.current,
       style: "mapbox://styles/mapbox/standard", // Choose globe-friendly style
       center: [-140.5037, 38.0406], // Starting position [lng, lat]
-      zoom: zoomLevel,
+      zoom: isDesktop ? 1 : 0,
       projection: "globe", // Set the map projection to 'globe'
       interactive: false,
     });
@@ -60,6 +60,13 @@ function App() {
 
     mapRef.current = map;
 
+    const handleResize = () => {
+      setIsDesktop(window.innerWidth > 768); // Update based on window size
+      mapRef.current.setZoom(window.innerWidth >= 768 ? 1 : 0);
+    };
+
+    window.addEventListener("resize", handleResize);
+
     // Function to animate the map rotation
     const rotateGlobe = () => {
       const center = map.getCenter();
@@ -85,8 +92,55 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <div id="map-container" ref={mapContainerRef} />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+        />
+        <img src={icon}></img>
+        <span className="material-symbols-outlined" style={{ fontSize: "2em" }}>
+          menu
+        </span>
       </header>
+      <div
+        style={{
+          position: "absolute",
+          width: "100%",
+          left: 0,
+          right: 0,
+          bottom: isDesktop ? "10em" : "5em",
+          textAlign: "center",
+          color: "white",
+        }}
+      >
+        <h1 style={{ paddingInline: "2em" }}>
+          <span
+            style={{ fontWeight: "normal", fontSize: "medium", opacity: 0.5 }}
+          >
+            If you remember your brother has something against you, leave your
+            gift and go—
+          </span>
+        </h1>
+        <h1
+          style={{
+            color: "red",
+            marginBottom: "-.4em",
+            fontSize: "xxx-large",
+            marginInlineStart: "-2.9em",
+          }}
+        >
+          BE
+        </h1>
+        <h1 style={{ margin: 0 }}>RECONCILED</h1>
+        <img
+          src={man}
+          style={{
+            width: "5em",
+            marginTop: "-5.5em",
+          }}
+        ></img>
+      </div>
+
+      <div id="map-container" ref={mapContainerRef} />
     </div>
   );
 }
