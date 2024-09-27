@@ -3,7 +3,10 @@ import mapboxgl from "mapbox-gl";
 
 import icon from "./icon.png";
 import man from "./man.png";
+import BobbingWords from "./BobbingWords";
 import "mapbox-gl/dist/mapbox-gl.css";
+import { AwesomeButton } from "react-awesome-button";
+import "react-awesome-button/dist/styles.css";
 import "./App.css";
 
 function App() {
@@ -107,19 +110,48 @@ function App() {
           width: "100%",
           left: 0,
           right: 0,
-          bottom: isDesktop ? "10em" : "5em",
+          bottom: isDesktop ? "6em" : 0,
           textAlign: "center",
           color: "white",
         }}
       >
-        <h1 style={{ paddingInline: "2em" }}>
-          <span
-            style={{ fontWeight: "normal", fontSize: "medium", opacity: 0.5 }}
-          >
-            If you remember your brother has something against you, leave your
-            gift and go—
-          </span>
-        </h1>
+        <BobbingWords
+          words={[
+            "Conflict",
+            "Disagreement",
+            "Discord",
+            "Division",
+            "Estrangement",
+            "Hostility",
+            "Alienation",
+            "Separation",
+            "Disunion",
+            "Dispute",
+            "Dissension",
+            "Opposition",
+            "Animosity",
+            "Antagonism",
+            "Breakup",
+            "Misunderstanding",
+            "Divergence",
+            "Disaffection",
+            "Detachment",
+            "Fracture",
+            "Isolation",
+            "Schism",
+            "Split",
+            "Quarrel",
+            "Feud",
+            "Enmity",
+            "Severance",
+            "Division",
+            "Disparity",
+            "War",
+            "Gossip",
+            "Divorce",
+          ]}
+        />
+
         <h1
           style={{
             color: "red",
@@ -138,6 +170,22 @@ function App() {
             marginTop: "-5.5em",
           }}
         ></img>
+        <div>
+          <AwesomeButton type="primary" style={{ margin: "1em" }}>
+            <span
+              class="material-symbols-outlined"
+              style={{
+                fontSize: "x-large",
+                paddingRight: ".5em",
+                marginRight: ".5em",
+                borderRight: "solid black 1px",
+              }}
+            >
+              rocket_launch
+            </span>
+            EMBARK
+          </AwesomeButton>
+        </div>
       </div>
 
       <div id="map-container" ref={mapContainerRef} />
