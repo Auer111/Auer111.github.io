@@ -1,3 +1,12 @@
+.content-container{
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    right: 0px;
+    bottom: -0;
+    text-align: center;
+    color: white;
+}
 #map-container{
   height: 200vh !important;
   z-index: -1;

@@ -105,15 +105,8 @@ function App() {
         </span>
       </header>
       <div
-        style={{
-          position: "absolute",
-          width: "100%",
-          left: 0,
-          right: 0,
-          bottom: isDesktop ? "6em" : 0,
-          textAlign: "center",
-          color: "white",
-        }}
+        className="content-container"
+        style={{ bottom: isDesktop ? "6em" : 0 }}
       >
         <BobbingWords
           words={[
@@ -173,7 +166,7 @@ function App() {
         <div>
           <AwesomeButton type="primary" style={{ margin: "1em" }}>
             <span
-              class="material-symbols-outlined"
+              className="material-symbols-outlined"
               style={{
                 fontSize: "x-large",
                 paddingRight: ".5em",
@@ -187,17 +180,6 @@ function App() {
           </AwesomeButton>
         </div>
       </div>
-      <div
-        style={{
-          position: "absolute",
-          width: "100%",
-          left: 0,
-          right: 0,
-          bottom: 0,
-          textAlign: "center",
-          color: "white",
-        }}
-      ></div>
 
       <div id="map-container" ref={mapContainerRef} />
     </div>
